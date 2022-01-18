@@ -1,0 +1,37 @@
+databaseChangeLog:
+  - logicalFilePath: db/changelog/db.changelog-20220118.yaml
+  - changeSet:
+      id: 20220118-1
+      author: dvodyanov
+      comment: "Create author"
+      changes:
+        - insert:
+            tableName: author
+            columns:
+              - column:
+                  name: name_author
+                  value: "Булгаков М.Ф"
+        - insert:
+            tableName: author
+            columns:
+              - column:
+                  name: name_author
+                  value: "Достоевский Ф.М"
+        - insert:
+            tableName: author
+            columns:
+              - column:
+                  name: name_author
+                  value: "Есенин С.А"
+        - insert:
+            tableName: author
+            columns:
+              - column:
+                  name: name_author
+                  value: "Пастернак Б.Л"
+        - insert:
+            tableName: author
+            columns:
+              - column:
+                  name: name_author
+                  value: "Лермонтов М.Ю"

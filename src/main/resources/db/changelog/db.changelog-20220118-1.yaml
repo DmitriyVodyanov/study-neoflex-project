@@ -1,0 +1,25 @@
+databaseChangeLog:
+  - logicalFilePath: db/changelog/db.changelog-20220118-1.yaml
+  - changeSet:
+      id: 20220118-2
+      author: dvodyanov
+      comment: "Create author"
+      changes:
+        - insert:
+            tableName: genre
+            columns:
+              - column:
+                  name: name_genre
+                  value: "Роман"
+        - insert:
+            tableName: genre
+            columns:
+              - column:
+                  name: name_genre
+                  value: "Поэзия"
+        - insert:
+            tableName: genre
+            columns:
+              - column:
+                  name: name_genre
+                  value: "Приключения"

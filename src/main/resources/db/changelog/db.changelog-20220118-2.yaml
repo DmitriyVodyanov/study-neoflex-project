@@ -1,0 +1,133 @@
+databaseChangeLog:
+  - logicalFilePath: db/changelog/db.changelog-20220118.yaml
+  - changeSet:
+      id: 20220118-2
+      author: dvodyanov
+      comment: "Create author"
+      changes:
+        - insert:
+            tableName: book
+            columns:
+              - column:
+                  name: title
+                  value: "Мастер и маграгита"
+              - column:
+                  name: author_id
+                  value: "1"
+              - column:
+                  name: genre_id
+                  value: "1"
+              - column:
+                  name: price
+                  value: "670.99"
+              - column:
+                  name: amount
+                  value: "3"
+        - insert:
+            tableName: book
+            columns:
+              - column:
+                  name: title
+                  value: "Белая гвардия"
+              - column:
+                  name: author_id
+                  value: "1"
+              - column:
+                  name: genre_id
+                  value: "1"
+              - column:
+                  name: price
+                  value: "540.50"
+              - column:
+                  name: amount
+                  value: "5"
+        - insert:
+            tableName: book
+            columns:
+              - column:
+                  name: title
+                  value: "Идиот"
+              - column:
+                  name: author_id
+                  value: "2"
+              - column:
+                  name: genre_id
+                  value: "1"
+              - column:
+                  name: price
+                  value: "460.00"
+              - column:
+                  name: amount
+                  value: "10"
+        - insert:
+            tableName: book
+            columns:
+              - column:
+                  name: title
+                  value: "Братья карамазовы"
+              - column:
+                  name: author_id
+                  value: "2"
+              - column:
+                  name: genre_id
+                  value: "1"
+              - column:
+                  name: price
+                  value: "799.01"
+              - column:
+                  name: amount
+                  value: "3"
+        - insert:
+            tableName: book
+            columns:
+              - column:
+                  name: title
+                  value: "Игрок"
+              - column:
+                  name: author_id
+                  value: "2"
+              - column:
+                  name: genre_id
+                  value: "1"
+              - column:
+                  name: price
+                  value: "480.50"
+              - column:
+                  name: amount
+                  value: "10"
+        - insert:
+            tableName: book
+            columns:
+              - column:
+                  name: title
+                  value: "Черный человек"
+              - column:
+                  name: author_id
+                  value: "3"
+              - column:
+                  name: genre_id
+                  value: "2"
+              - column:
+                  name: price
+                  value: "570.20"
+              - column:
+                  name: amount
+                  value: "6"
+        - insert:
+            tableName: book
+            columns:
+              - column:
+                  name: title
+                  value: "Лирика"
+              - column:
+                  name: author_id
+                  value: "4"
+              - column:
+                  name: genre_id
+                  value: "2"
+              - column:
+                  name: price
+                  value: "518.99"
+              - column:
+                  name: amount
+                  value: "2"
