@@ -2,7 +2,7 @@ databaseChangeLog:
   - logicalFilePath: db/changelog/db.changelog-20220118.yaml
   - changeSet:
       id: 20220118-2
-      author: dvodyanov
+      author: your_liquibase_username
       comment: "Create author"
       changes:
         - insert:
@@ -18,11 +18,11 @@ databaseChangeLog:
                   name: genre_id
                   value: "1"
               - column:
-                  name: price
-                  value: "670.99"
+                   name: price
+                   value: "670.99"
               - column:
-                  name: amount
-                  value: "3"
+                   name: amount
+                   value: "3"
         - insert:
             tableName: book
             columns:

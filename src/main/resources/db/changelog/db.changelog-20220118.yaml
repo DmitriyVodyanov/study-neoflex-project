@@ -1,8 +1,8 @@
 databaseChangeLog:
   - logicalFilePath: db/changelog/db.changelog-20220118.yaml
   - changeSet:
-      id: 20220118-1
-      author: dvodyanov
+      id: 20220118-0
+      author: your_liquibase_username
       comment: "Create author"
       changes:
         - insert:
