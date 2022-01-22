@@ -1,0 +1,86 @@
+databaseChangeLog:
+  - logicalFilePath: db/changelog/db.changelog-master.yaml
+  - changeSet:
+      id: 1
+      author: dvodyanov
+      changes:
+        - createTable:
+            tableName: author
+            columns:
+              - column:
+                  name: author_id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name_author
+                  type: varchar(50)
+  - changeSet:
+      id: 2
+      author: dvodyanov
+      changes:
+        - createTable:
+            tableName: genre
+            columns:
+              - column:
+                  name: genre_id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name_genre
+                  type: varchar(50)
+  - changeSet:
+      id: 3
+      author: dvodyanov
+      changes:
+        - createTable:
+            tableName: book
+            columns:
+              - column:
+                  name: book_id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: title
+                  type: varchar(50)
+                  constraints:
+                    unique: false
+              - column:
+                  name: author_id
+                  type: int
+                  constraints:
+                    nullable: false
+                    foreignKey: true
+                    foreignKeyName: author_id
+                    references: author (author_id)
+              - column:
+                  name: genre_id
+                  type: int
+                  constraints:
+                    nullable: false
+                    foreignKey: true
+                    foreignKeyName: genre_id
+                    references: genre (genre_id)
+              - column:
+                  name: price
+                  type: decimal(8, 2)
+              - column:
+                  name: amount
+                  type: int
+  - include:
+      file: db.changelog-20220118.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: db.changelog-20220118-1.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: db.changelog-20220118-2.yaml
+      relativeToChangelogFile: true
